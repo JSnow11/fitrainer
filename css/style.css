@@ -1,0 +1,582 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+
+/* Backgrounds --------------------------------------------------------------------------------------------- */
+
+.BlueBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    border: 0px;
+    padding: 7%;
+    width: 100%;
+    height: 100%;
+    background-color: #77BAE8;
+    color: white;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+
+/*Contenedores y boxes -----------------------------------------------------------------------------------------*/
+
+.WhiteBackgroundContainer {
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.loginContainer {
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*perfil ----------------------------------------------------------------------------------------------- */
+
+.profileInfo {
+    flex-grow: 1;
+    margin-right: 2%;
+    padding: 2%;
+}
+
+.profileBoard {
+    flex-grow: 4;
+    margin-left: 2%;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+
+/*admin*/
+
+.infoInsertar {
+    margin: 0% 8%;
+}
+
+.smallContainer {
+    width: 30%;
+    margin: 0.5%;
+    padding: 1%;
+    height: 100%;
+}
+
+.smallContainer form,
+ul {
+    border: 1px solid rgb(85, 132, 163);
+    border-radius: 10px;
+    padding: 2%;
+    height: fit-content;
+}
+
+.bigContainer form,
+ul {
+    border: 1px solid rgb(85, 132, 163);
+    border-radius: 10px;
+    padding: 2%;
+    transition-duration: 0.4s;
+}
+
+.bigContainer ul:hover {
+    border: 1px solid rgb(74, 127, 163);
+    background-color: rgba(119, 187, 232, 0.048);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.bigContainer {
+    width: 70%;
+    margin: 0.5%;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.errorBox {
+    margin-bottom: 4%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid red;
+    color: red;
+    border-radius: 10px;
+}
+
+.correctBox {
+    margin-bottom: 4%;
+    width: 100%;
+    padding: 2px;
+    border: 1px solid rgb(85, 132, 163);
+    color: rgb(85, 132, 163);
+    border-radius: 10px;
+}
+
+.errorBox:hover {
+    background-color: rgba(255, 188, 188, 0.089);
+}
+
+.textBox {
+    border: 1px solid rgb(85, 132, 163);
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.textBox:hover {
+    transition-duration: 0.4s;
+    background-color: rgba(130, 191, 231, 0.24);
+    border: 1px solid rgba(130, 157, 231, 0.767);
+}
+
+
+/*Scroll de la tabla---------------------------------------------------------------*/
+
+.scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 10px;
+    height: 70vh;
+}
+
+.smallScroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 10px;
+    max-height: 42vh;
+}
+
+.smallerScroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 10px;
+    height: 22vh;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 20px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #77BAE8;
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(85, 138, 173);
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+.container {
+    display: block;
+    border: 1px solid rgb(71, 141, 187);
+    border-radius: 10px;
+    padding: 1% 2%;
+    margin: 0% 11%;
+    width: 100%;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: right;
+    width: 60%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
+/*Formularios ------------------------------------------------------------------------------------------*/
+
+input,
+textarea,
+select {
+    transition-duration: 0.4s;
+    padding: 10px;
+    border: 1.1px solid rgb(71, 141, 187);
+    background-color: whitesmoke;
+    border-radius: 4px;
+    resize: none;
+    transition-duration: 0.4s;
+}
+
+input:hover {
+    background-color: rgb(215, 227, 235);
+}
+
+input:focus {
+    border: 1px solid rgba(0, 0, 255, 0.664);
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+.smallText textarea {
+    float: left;
+    width: 100%;
+    max-height: 80px;
+    outline: none;
+    resize: none;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-weight: bold;
+}
+
+input[type=submit] {
+    float: right;
+    background-color: #77BAE8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(44, 81, 105);
+    font-weight: bold;
+}
+
+input[type=number] {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 70px;
+}
+
+input[type=file] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.fileInput {
+    font-size: 13px;
+    font-weight: lighter;
+    padding: 10px;
+    border: 1.1px solid rgb(71, 141, 187);
+    background-color: whitesmoke;
+    border-radius: 4px;
+    resize: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.fileInput:hover {
+    background-color: rgba(119, 187, 232, 0.301);
+}
+
+.pickOp {
+    font-weight: lighter;
+}
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
+/*Buttons ----------------------------------------------------------------------------------------------*/
+
+button {
+    text-decoration: none;
+    background-color: #77BAE8;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: rgb(44, 81, 105);
+    color: white;
+    font-weight: 100;
+}
+
+
+/*links*/
+
+a {
+    color: rgb(62, 104, 133);
+    font-weight: bold;
+}
+
+
+/*Bold*/
+
+b {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+/* Barra de Navengación ------------------------------------------------------------------------------- */
+
+.topnav {
+    font-style: bold;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border: solid black;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    height: inherit;
+    padding: 14px 10px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.topnav a:hover {
+    background-color: rgba(255, 255, 255, 0.781);
+    color: rgb(85, 162, 214);
+    border-bottom: 1.5px solid #77BAE8;
+}
+
+.topnav img {
+    float: left;
+    align-self: center;
+    height: inherit;
+}
+
+.topnav .floatRight {
+    float: right;
+}
+
+.fRight {
+    float: right;
+    width: 20%;
+}
+
+.topnav a.active {
+    border-bottom: 2px solid #77BAE8;
+}
+
+.topnav .bar {
+    float: right;
+    display: none;
+}
+
+.topnav a.icon {
+    float: right;
+    display: none;
+}
+
+.topnav a.responsiveTitle {
+    display: none;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+/*Text -------------------------------------------------------------------------------------------------*/
+
+h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 0;
+    border: 0px;
+}
+
+h2 {
+    border-style: hidden hidden solid hidden;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 3%;
+}
+
+h3 {
+    border-style: hidden hidden solid hidden;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 14px;
+    margin-bottom: 1%;
+    border: 0px;
+}
+
+.waiting {
+    color: gray;
+}
+
+
+/*Tables -------------------------------------------------------------------------------------------------*/
+
+table {
+    border-collapse: separate;
+    width: 100%;
+    max-height: fit-content;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(228, 244, 255);
+}
+
+th {
+    background-color: rgb(51, 118, 143);
+    color: rgb(255, 255, 255);
+}
+
+thead {
+    background-color: #333;
+    color: #FDFDFD;
+}
+
+tbody {
+    overflow: auto;
+}
+
+hr {
+    color: #77BAE8;
+    background-color: #77BAE8;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+/*Footer--------------------------------------------------------------------------------------------------*/
+
+footer {
+    height: 6vh;
+    position: relative;
+    bottom: 0;
+    text-align: right;
+    width: 96vw;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1000px) {
+    .smallContainer {
+        width: 100%;
+        margin: 0.5%;
+        padding: 1%;
+        max-height: 40%;
+        text-align: center;
+    }
+    .topnav a.responsiveTitle {
+        display: block;
+    }
+    .WhiteBackgroundContainer {
+        flex-wrap: wrap;
+    }
+    .bigContainer {
+        width: 100%;
+        margin: 0.5%;
+        padding: 1%;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .profileBoard {
+        width: 100%;
+        text-align: center;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav a.responsiveTitle {
+        display: block;
+    }
+    .topnav.responsive .floatRight {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    h3 {
+        text-align: center;
+    }
+}
